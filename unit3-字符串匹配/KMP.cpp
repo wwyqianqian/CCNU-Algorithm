@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
+int* buildNext (char* P);
 
-int match (char* P, char* T, int* buildNext (char* P)) {
+int match (char* P, char* T) {
     int* next = buildNext(P);
     int n = (int)strlen(T), i = 0;
     int m = (int)strlen(P), j = 0;
@@ -40,7 +41,7 @@ int* buildNext (char* P) {
 int main() {
     char T[] = "ababcabccabccacaab";
     char P[] = "abccac";
-    match(P, T, buildNext);
+    match(P, T);
 
     return 0;
 }
